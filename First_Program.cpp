@@ -2,7 +2,7 @@
 
 #include<iostream.h>
 #include<conio.h>
-int mmain()
+int main()
 {
   cout<<"Hellow World";
   return 0;
