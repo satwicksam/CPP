@@ -1,3 +1,5 @@
+//Basic Calculator using function...
+
 #include<iostream.h>
 #include<conio.h>
 class cal
