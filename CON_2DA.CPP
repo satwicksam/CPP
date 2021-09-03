@@ -1,3 +1,5 @@
+//Matrix using 2D array
+
 #include<iostream.h>
 #include<conio.h>
 class matrix
@@ -10,9 +12,9 @@ class matrix
  {
   p[i][j]=value;
  }
- int & putelement(int i,int j,int value)
+ int & putelement(int i,int j)
  {
-  return p[i][j]=value;
+  return p[i][j];
  }
 };
 
@@ -27,18 +29,25 @@ matrix::matrix(int x,int y)
 int main()
 {
  int m,n;
+ clrscr();
  cout<<"Enter size of matrix: ";
  cin>>m>>n;
- matrix (m,n); //matrix object is created
+ matrix A(m,n); //matrix object is created
  int i,j,value;
  for(i=0;i<m;i++)
   for(j=0;j<n;j++)
   {
    cin>>value;
-   cout<<A.getelement(i,j,value);
+   A.getelement(i,j,value);
   }
-  cout<<"\n";
- cout<<A.putelement(1,2);
+ for(i=0;i<m;i++)
+ {
+  for(j=0;j<n;j++)
+  {
+   cout<<A.putelement(i,j)<<" ";
+  }
+  cout<<endl;
+ }
  getch();
  return 0;
 }
